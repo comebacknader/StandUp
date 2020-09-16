@@ -19,7 +19,9 @@ import {
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import HomeScreen from './screens/HomeScreen.js';
+import HomeScreen from './screens/HomeScreen';
+import ImpressionsScreen from './screens/Impressions';
+import BitsScreen from './screens/Bits';
 
 const Stack = createStackNavigator();
 
@@ -35,7 +37,8 @@ const App = () => {
             headerTitleStyle: { fontFamily: 'RibeyeMarrow-Regular'}
           }}
         />
-        {/* <Stack.Screen name="Profile" component={ProfileScreen} /> */}
+        <Stack.Screen name="Impressions" component={ImpressionsScreen} />
+        <Stack.Screen name="Bits" component={BitsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -1,31 +1,43 @@
 import React from 'react'
 
 import {
-  Platform,
   StyleSheet,
   View,
   Text,
-  TextInput,
-  Button,
   Image,
+  TouchableHighlight,
 } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
 
 const HomeScreen = ({ navigation }) => {
-  React.useEffect(() => {
-  }, [])
+
+  const onPressImpressions = () => {
+    navigation.navigate('Impressions')
+  }
+
+  const onPressBits = () => {
+    navigation.navigate('Bits')
+  }
   
   return (
       <View style={styles.homeContainer}>
         <ScrollView>
-          <View style={styles.menuListItem}>
-            <Image source={require('../src/assets/images/theater.png')} style={styles.menuImage} />
-            <Text style={styles.menuText}>Impressions</Text>
-          </View>
-          <View style={styles.menuListItem}>
-            <Image source={require('../src/assets/images/actor.png')} style={styles.menuImage} />
-            <Text style={styles.menuText}>Bits</Text>
-          </View>
+          <TouchableHighlight activeOpacity={0.6}
+            underlayColor="#DDDDDD"
+            onPress={onPressImpressions}>
+            <View style={styles.menuListItem}>
+              <Image source={require('../src/assets/images/theater.png')} style={styles.menuImage} />
+              <Text style={styles.menuText}>Impressions</Text>
+            </View>
+          </TouchableHighlight>
+          <TouchableHighlight activeOpacity={0.6}
+            underlayColor="#DDDDDD"
+            onPress={onPressBits}>
+            <View style={styles.menuListItem}>
+              <Image source={require('../src/assets/images/actor.png')} style={styles.menuImage} />
+              <Text style={styles.menuText}>Bits</Text>
+            </View>
+          </TouchableHighlight>
         </ScrollView>
       </View>
   )
@@ -43,7 +55,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 10,
     borderBottomColor: 'lightgray',
-    borderBottomWidth: 1  },
+    borderBottomWidth: 1  
+  },
   menuText: {
     marginLeft: 20,
     fontFamily: 'RibeyeMarrow-Regular',
