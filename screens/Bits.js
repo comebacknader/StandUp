@@ -8,13 +8,13 @@ import {
 const Bits = ({ navigation }) => {
 
   return (
-      <View style={styles.impressionsContainer}>
+      <View style={styles.container}>
       </View>
   )
 }
 
 const styles = StyleSheet.create({
-  impressionsContainer: {
+  container: {
   },
 });
 

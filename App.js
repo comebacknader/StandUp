@@ -22,6 +22,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './screens/HomeScreen';
 import ImpressionsScreen from './screens/Impressions';
 import BitsScreen from './screens/Bits';
+import { Typography } from './styles';
 
 const Stack = createStackNavigator();
 
@@ -34,7 +35,7 @@ const App = () => {
           component={HomeScreen}
           options={{ 
             title: 'Home' ,
-            headerTitleStyle: { fontFamily: 'RibeyeMarrow-Regular'}
+            headerTitleStyle: { fontFamily: Typography.TITLE_FONT }
           }}
         />
         <Stack.Screen name="Impressions" component={ImpressionsScreen} />
