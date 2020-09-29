@@ -3,8 +3,12 @@ module.exports = {
     [
       'module-resolver',
       {
+        root: ["./src"],
         alias: {
-          assets: './src/assets',
+          assets: './assets',
+          images: './images',
+          components: './components',
+          screens: './screens',
         },
       },
     ],

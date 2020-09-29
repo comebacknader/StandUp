@@ -21,27 +21,45 @@
     "react-native-global-props": "^1.1.5",
     "react-native-reanimated": "^1.13.0",
     "react-native-safe-area-context": "^3.1.4",
-    "react-native-screens": "^2.10.1"
+    "react-native-screens": "^2.10.1",
+    "react-native-svg": "^12.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.11.1",
     "@babel/runtime": "^7.11.2",
     "@react-native-community/eslint-config": "^2.0.0",
+    "@types/jest": "^26.0.14",
+    "@types/react": "^16.9.49",
+    "@types/react-native": "^0.63.22",
+    "@types/react-test-renderer": "^16.9.3",
+    "@typescript-eslint/eslint-plugin-tslint": "^4.2.0",
+    "@typescript-eslint/parser": "^4.2.0",
     "babel-jest": "^26.3.0",
     "eslint": "^7.7.0",
     "jest": "^26.4.0",
     "metro-react-native-babel-preset": "^0.62.0",
-    "react-test-renderer": "16.13.1"
+    "react-native-svg-transformer": "^0.14.3",
+    "react-test-renderer": "16.13.1",
+    "typescript": "^4.0.3"
   },
   "jest": {
     "preset": "react-native",
     "setupFiles": [
       "./node_modules/react-native-gesture-handler/jestSetup.js",
-      "./mock.js"
+      "./mock.js",
+      "<rootDir>/jest/setup.js"
     ],
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
-    }
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
   }
 }

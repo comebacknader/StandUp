@@ -19,27 +19,23 @@ import {
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import HomeScreen from './screens/HomeScreen';
-import ImpressionsScreen from './screens/Impressions';
-import BitsScreen from './screens/Bits';
-import { Typography } from './styles';
+import Record from './src/screens/Record';
+import { StackParamList } from './src/components/Annotations';
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator<StackParamList>();
 
 const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
-          name="Home"
-          component={HomeScreen}
-          options={{ 
-            title: 'Home' ,
-            headerTitleStyle: { fontFamily: Typography.TITLE_FONT }
+          name="Record"
+          component={Record}
+          options={{
+            headerShown: false, 
+            title: 'Record' ,
           }}
         />
-        <Stack.Screen name="Impressions" component={ImpressionsScreen} />
-        <Stack.Screen name="Bits" component={BitsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

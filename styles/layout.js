@@ -1,3 +1,7 @@
+export const isFlex = {
+  flex: 1,
+}
+
 export const flexAndDirectionRow = {
   flex: 1,
   flexDirection: 'row',
@@ -5,6 +9,10 @@ export const flexAndDirectionRow = {
 
 export const alignItemsCenter = {
   alignItems: 'center',
+}
+
+export const justifyContentCenter = {
+  justifyContent: 'center',
 }
 
 export const paddingTen = {
