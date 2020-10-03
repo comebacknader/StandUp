@@ -4,15 +4,15 @@ export const isFlex = {
 
 export const flexAndDirectionRow = {
   flex: 1,
-  flexDirection: 'row',
+  flexDirection: "row",
 }
 
 export const alignItemsCenter = {
-  alignItems: 'center',
+  alignItems: "center",
 }
 
 export const justifyContentCenter = {
-  justifyContent: 'center',
+  justifyContent: "center",
 }
 
 export const paddingTen = {
@@ -20,7 +20,7 @@ export const paddingTen = {
 }
 
 export const bottomBorderGray = {
-  borderBottomColor: 'lightgray',
+  borderBottomColor: "lightgray",
   borderBottomWidth: 1,
 }
 
